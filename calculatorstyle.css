@@ -1,0 +1,65 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    153deg,
+    rgba(2, 0, 36, 1) 14%,
+    rgba(7, 7, 42, 1) 41%,
+    rgba(0, 212, 255, 1) 91%
+  );
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  position: relative;
+  width: 300px;
+  backdrop-filter: blur(10px) saturate(200%);
+  -webkit-backdrop-filter: blur(10px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.display {
+  min-height: 34px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 10px;
+  font-size: 2em;
+  text-align: right;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
